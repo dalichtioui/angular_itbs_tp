@@ -1,38 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CasesComponent } from './cases/cases.component';
-import { CasesDetailsComponent } from './cases-details/cases-details.component';
-import { AddCasesComponent } from './add-cases/add-cases.component';
-import { EditCasesComponent } from './edit-cases/edit-cases.component';
-import { CasesStatComponent } from './cases-stat/cases-stat.component';
+import { AuthGuard } from './auth.guard';
+import { AccueilComponent } from './components/accueil/accueil.component';
+import { AdduniversityComponent } from './components/adduniversity/adduniversity.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DetailuniversityComponent } from './components/detailuniversity/detailuniversity.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { UniversityComponent } from './components/university/university.component';
+import { UpdateuniversityComponent } from './components/updateuniversity/updateuniversity.component';
 
 
 const routes: Routes = [
-  {
-    path: 'cases',
-    component: CasesComponent,
-    data: { title: 'List of cases' }
-  },
-  {
-    path: 'add-cases',
-    component: AddCasesComponent,
-    data: { title: 'Add Case' }
-  },
-  {
-    path: 'edit-cases/:id',
-    component: EditCasesComponent,
-    data: { title: 'Edit Case' }
-  },
-  {
-    path: 'cases-stat',
-    component: CasesStatComponent,
-    data: { title: 'Cases Statistic' }
-  },
-  {
-    path: 'cases-details/:id',
-    component: CasesDetailsComponent,
-    data: { title: 'Case Details' }
-  }
+  {path:'dashboard',component:DashboardComponent, canActivate:[AuthGuard]},
+  {path:'',component:AccueilComponent},
+  {path:'university-add',component:AdduniversityComponent, canActivate:[AuthGuard]},
+  {path:'university-update/:id',component:UpdateuniversityComponent, canActivate:[AuthGuard]},
+  {path:'university',component:UniversityComponent, canActivate:[AuthGuard]},
+  {path:'detail/:id',component:DetailuniversityComponent},
+  {  path:'login'   , component:LoginComponent },
+  {  path:'register', component:RegisterComponent },
 
 ];
 

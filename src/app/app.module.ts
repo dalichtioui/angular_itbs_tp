@@ -3,62 +3,44 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CasesComponent } from './cases/cases.component';
-import { CasesDetailsComponent } from './cases-details/cases-details.component';
-import { AddCasesComponent } from './add-cases/add-cases.component';
-import { EditCasesComponent } from './edit-cases/edit-cases.component';
-import { CasesStatComponent } from './cases-stat/cases-stat.component';
-
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AccueilComponent } from './components/accueil/accueil.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { TopbarComponent } from './components/topbar/topbar.component';
+import { UniversityComponent } from './components/university/university.component';
 import {HttpClientModule} from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import {MatInputModule} from '@angular/material/input';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatSortModule} from '@angular/material/sort';
-import {MatTableModule} from '@angular/material/table';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSliderModule} from '@angular/material/slider';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import {MatSelectModule} from '@angular/material/select';
-
-import {ChartsModule} from 'ng2-charts';
+import { AdduniversityComponent } from './components/adduniversity/adduniversity.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UpdateuniversityComponent } from './components/updateuniversity/updateuniversity.component';
+import { DetailuniversityComponent } from './components/detailuniversity/detailuniversity.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CasesComponent,
-    CasesDetailsComponent,
-    AddCasesComponent,
-    EditCasesComponent,
-    CasesStatComponent
+    NavbarComponent,
+    FooterComponent,
+    DashboardComponent,
+    AccueilComponent,
+    SidebarComponent,
+    TopbarComponent,
+    UniversityComponent,
+    AdduniversityComponent,
+    UpdateuniversityComponent,
+    DetailuniversityComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    MatInputModule,
-    MatPaginatorModule,
-    MatProgressSpinnerModule,
-    MatSortModule,
-    MatTableModule,
-    MatIconModule,
-    MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatButtonToggleModule,
-    MatSelectModule,
-    ChartsModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
